@@ -11,11 +11,20 @@ Prototype showcasing surprise pack purchases powered by RevenueCat and Supabase.
 - Edge function `reconcile_entitlements` syncs RevenueCat entitlements.
 - Edge function `generate_suggestions` queries calendar data to suggest free meeting slots.
 
-Run tests (none defined yet):
+## Testing
+
+### Unit tests
+
+Run the Jest unit tests, including coverage for the AuthSession helper and the `generate_suggestions` edge function:
 
 ```
 npm test
 ```
+
+
+### Calendar integration test
+
+Manual steps for verifying that the calendar UI displays suggestions are documented in `__tests__/manual/calendar-suggestions.md`.
 
 ### Deploy edge functions
 
@@ -24,6 +33,7 @@ Deploy the suggestions function to your Supabase project:
 ```
 supabase functions deploy generate_suggestions
 ```
+
 =======
 # Welcome to your Expo app 👋
 

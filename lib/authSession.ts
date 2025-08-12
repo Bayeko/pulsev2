@@ -1,3 +1,16 @@
+
+import { supabase } from './supabase';
+import type { Session } from '@supabase/supabase-js';
+
+/**
+ * Fetches the current authenticated session from Supabase.
+ * Throws any underlying error from the Supabase client.
+ */
+export async function getAuthSession(): Promise<Session | null> {
+  const { data, error } = await supabase.auth.getSession();
+  if (error) throw error;
+  return data.session;
+
 import * as AuthSession from 'expo-auth-session';
 import { supabase } from './supabase';
 
@@ -34,4 +47,5 @@ export async function signInWithOAuth(provider: OAuthProvider) {
   } else {
     throw new Error('OAuth flow was cancelled');
   }
+
 }
