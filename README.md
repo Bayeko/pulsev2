@@ -10,11 +10,19 @@ Prototype showcasing surprise pack purchases powered by RevenueCat and Supabase.
 - Purchases are stored in the `purchases` table using Supabase credentials.
 - Edge function `reconcile_entitlements` syncs RevenueCat entitlements.
 
-Run tests (none defined yet):
+## Testing
+
+### Unit tests
+
+Run the Jest unit tests, including coverage for the AuthSession helper and the `generate_suggestions` edge function:
 
 ```
 npm test
 ```
+
+### Calendar integration test
+
+Manual steps for verifying that the calendar UI displays suggestions are documented in `__tests__/manual/calendar-suggestions.md`.
 =======
 # Welcome to your Expo app 👋
 
