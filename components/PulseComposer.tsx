@@ -31,6 +31,7 @@ export default function PulseComposer({ onCreate }: { onCreate?: (pulse: any) =>
     onCreate?.({ ...newPulse, id: Date.now() });
 
     setLoading(true);
+    // TODO: Write this Moment to external calendars per docs/moments-calendar-sync.md
     const { error } = await supabase.from('pulses').insert(newPulse);
     setLoading(false);
 
