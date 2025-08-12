@@ -11,12 +11,12 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     id: 'basic_pack',
     sku: 'basic_pack',
     title: 'Basic Pack',
-    description: 'Starter pack of surprises'
+    description: 'Starter pack of items'
   },
   premium_pack: {
     id: 'premium_pack',
     sku: 'premium_pack',
     title: 'Premium Pack',
-    description: 'Premium surprises for more fun'
+    description: 'Premium pack of items'
   }
 };

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
+import { signInWithOAuth, OAuthProvider } from '../../lib/authSession'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -15,8 +16,13 @@ export default function Login() {
     if (!error) router.push('/')
   }
 
-  const handleOAuth = async (provider: 'google' | 'github') => {
-    await supabase.auth.signInWithOAuth({ provider })
+  const handleOAuth = async (provider: OAuthProvider) => {
+    try {
+      await signInWithOAuth(provider)
+      router.push('/')
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   return (
@@ -38,7 +44,8 @@ export default function Login() {
         <button type="submit">Login</button>
       </form>
       <button onClick={() => handleOAuth('google')}>Login with Google</button>
-      <button onClick={() => handleOAuth('github')}>Login with GitHub</button>
+      <button onClick={() => handleOAuth('apple')}>Login with Apple</button>
+      <button onClick={() => handleOAuth('azure')}>Login with Outlook</button>
     </div>
   )
 }

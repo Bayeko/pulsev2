@@ -9,6 +9,7 @@ Prototype showcasing surprise pack purchases powered by RevenueCat and Supabase.
 - RevenueCat is configured via `NEXT_PUBLIC_RC_API_KEY`.
 - Purchases are stored in the `purchases` table using Supabase credentials.
 - Edge function `reconcile_entitlements` syncs RevenueCat entitlements.
+- Edge function `generate_suggestions` queries calendar data to suggest free meeting slots.
 
 ## Testing
 
@@ -20,9 +21,19 @@ Run the Jest unit tests, including coverage for the AuthSession helper and the `
 npm test
 ```
 
+
 ### Calendar integration test
 
 Manual steps for verifying that the calendar UI displays suggestions are documented in `__tests__/manual/calendar-suggestions.md`.
+
+### Deploy edge functions
+
+Deploy the suggestions function to your Supabase project:
+
+```
+supabase functions deploy generate_suggestions
+```
+
 =======
 # Welcome to your Expo app 👋
 
