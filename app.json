@@ -7,6 +7,9 @@
     "scheme": "tempapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "extra": {
+      "authRedirect": "tempapp://auth/callback"
+    },
     "ios": {
       "supportsTablet": true
     },
