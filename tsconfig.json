@@ -1,4 +1,5 @@
 {
+
   "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
@@ -14,4 +15,21 @@
     }
   },
   "include": ["app/**/*", "lib/**/*", "supabase/functions/**/*"]
+
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
+
 }
