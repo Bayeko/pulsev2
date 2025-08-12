@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import type { Database } from './database.types';
 
 function requireEnv(value: string | undefined, name: string): string {
   if (!value) {
@@ -10,4 +11,4 @@ function requireEnv(value: string | undefined, name: string): string {
 const SUPABASE_URL = requireEnv(process.env.EXPO_PUBLIC_SUPABASE_URL, 'SUPABASE_URL');
 const SUPABASE_ANON_KEY = requireEnv(process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY, 'SUPABASE_ANON_KEY');
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_ANON_KEY);
