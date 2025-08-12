@@ -25,7 +25,7 @@ serve(async (req) => {
   const message = {
     to: data.expo_push_token,
     sound: "default",
-    body: "You've got a Pulse \ud83d\udd12",
+    body: "Open the app to view your notification",
     data: { pulse_id: record.id },
   };
 
