@@ -8,10 +8,12 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.tempapp"
     },
     "android": {
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.example.tempapp"
     },
     "web": {
       "bundler": "metro",
@@ -20,6 +22,12 @@
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "supabaseRedirectUrl": "tempapp://auth",
+      "googleClientId": "GOOGLE_CLIENT_ID",
+      "appleClientId": "APPLE_CLIENT_ID",
+      "outlookClientId": "OUTLOOK_CLIENT_ID"
     }
   }
 }
