@@ -1,3 +1,21 @@
+
+# pulsev2
+
+Prototype showcasing surprise pack purchases powered by RevenueCat and Supabase.
+
+## Development
+
+- `app/surprise/index.tsx` offers a "Roll the dice" entry point and pack browser.
+- RevenueCat is configured via `NEXT_PUBLIC_RC_API_KEY`.
+- Purchases are stored in the `purchases` table using Supabase credentials.
+- Edge function `reconcile_entitlements` syncs RevenueCat entitlements.
+
+Run tests (none defined yet):
+
+```
+npm test
+```
+=======
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
@@ -54,3 +72,4 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+

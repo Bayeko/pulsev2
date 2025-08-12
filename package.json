@@ -1,4 +1,26 @@
 {
+
+  "name": "pulsev2",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "@revenuecat/purchases-js": "^4.3.0",
+    "next": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@supabase/supabase-js": "^2.33.0",
+    "hono": "^3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.5.0"
+  }
+
   "name": "temp-app",
   "main": "expo-router/entry",
   "version": "1.0.0",
