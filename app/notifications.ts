@@ -3,6 +3,16 @@ import Constants from 'expo-constants';
 import { supabase } from './supabase';
 import { NavigationContainerRef } from '@react-navigation/native';
 
+export function configureNotificationHandling(discreet: boolean) {
+  Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+      shouldShowAlert: !discreet,
+      shouldPlaySound: !discreet,
+      shouldSetBadge: false,
+    }),
+  });
+}
+
 export async function registerForPushNotifications() {
   let token;
   if (Constants.isDevice) {
