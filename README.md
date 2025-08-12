@@ -28,13 +28,20 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Copy the example environment file and add your Supabase credentials
+
+   ```bash
+   cp .env.example .env
+   # set EXPO_PUBLIC_SUPABASE_URL and EXPO_PUBLIC_SUPABASE_ANON_KEY in .env
+   ```
+
+3. Start the app
 
    ```bash
    npm start
    ```
 
-3. Run tests
+4. Run tests
 
    ```bash
    npm test
